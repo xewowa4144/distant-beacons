@@ -32,16 +32,19 @@ dependencies {
     compileOnly "com.terraformersmc:modmenu:${project.modmenu_version}"
 }
 
+def modVersion = project.version
+
 processResources {
-    inputs.property "version", project.version
+    inputs.property "version", modVersion
 
     filesMatching("fabric.mod.json") {
-        expand "version": project.version
+        expand "version": modVersion
     }
 }
 
 tasks.withType(JavaCompile).configureEach {
     options.release = 25
+    options.compilerArgs.add("-Xlint:deprecation")
 }
 
 java {

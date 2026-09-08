@@ -129,7 +129,7 @@ public final class DistantBeaconsScanManager {
 
             BlockPos pos = new BlockPos(candidate.x(), candidate.y(), candidate.z());
             // Never request a missing chunk. The registry is intentionally passive for unloaded areas.
-            if (!level.hasChunkAt(pos)) {
+            if (!level.getChunkSource().hasChunk(pos.getX() >> 4, pos.getZ() >> 4)) {
                 continue;
             }
 
