@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "com.xewowa4144.distantbeacons.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "client": [
+    "CameraCullDistanceMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

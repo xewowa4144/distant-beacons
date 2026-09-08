@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "distantbeacons",
+  "version": "${version}",
+  "name": "Distant Beacons",
+  "icon": "assets/distantbeacons/icon.png",
+  "description": "Always render Beacon Beams. See your beacons beam from a million blocks away, no matter the render distance!",
+  "authors": [
+    "xewowa4144"
+  ],
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.xewowa4144.distantbeacons.DistantBeaconsMod"
+    ],
+    "client": [
+      "com.xewowa4144.distantbeacons.DistantBeaconsClient"
+    ],
+    "modmenu": [
+      "com.xewowa4144.distantbeacons.DistantBeaconsModMenu"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "minecraft": "~26.2",
+    "java": ">=25",
+    "fabric-api": "*"
+  },
+  "mixins": [
+    "distantbeacons.client.mixins.json"
+  ]
+}
