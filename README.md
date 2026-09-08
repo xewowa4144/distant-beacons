@@ -1,6 +1,6 @@
 # Distant Beacons
 
-![Distant Beacon from 100,000 blocks away](https://cdn.modrinth.com/data/cached_images/6413e0a6d46ca068e56f14014d3e9898ec92aaf4.png)
+![Multiple beacons, ~1000 blocks apart each, with voxy](https://cdn.modrinth.com/data/EKfeICoL/images/221b359ad651733431ea4835dafb9e847a23b667.png)
 
 Now beacons can actually be used for markers across players worlds! Distant Beacons extends Minecraft's beacon beam rendering beyond the normal client render distance. This mod looks best with LOD rendering mods such as **[Voxy](https://modrinth.com/mod/voxy)** and **[Distant Horizons](https://modrinth.com/mod/distanthorizons)**. 
 
@@ -39,7 +39,7 @@ Controls the maximum thickness multiplier applied to distant beacon beams. Highe
 
 ### Camera Cull Distance
 
-Controls the maximum distance used by the camera culling adjustment for distant beacon rendering. Without the mod the camera culling sets the beacons beam render limit to **2048** blocks, while the mod increases it to **1,048,576** blocks, increasing the camera limit by **512** times! 
+Controls the maximum distance used by the camera culling adjustment for distant beacon rendering. Without the mod the camera culling sets the beacons beam render limit to **2048** blocks, while the mod increases it to **1,048,576** blocks.
 
 ### Beam Height
 
