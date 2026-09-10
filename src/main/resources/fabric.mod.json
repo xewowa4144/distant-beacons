@@ -27,6 +27,7 @@
     "fabric-api": "*"
   },
   "mixins": [
-    "distantbeacons.client.mixins.json"
+    "distantbeacons.client.mixins.json",
+    "distantbeacons.voxy.mixins.json"
   ]
 }

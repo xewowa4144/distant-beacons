@@ -10,6 +10,17 @@ repositories {
         name = "Terraformers"
         url = "https://maven.terraformersmc.com/"
     }
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "Modrinth"
+                url = "https://api.modrinth.com/maven"
+            }
+        }
+        filter {
+            includeGroup "maven.modrinth"
+        }
+    }
 }
 
 loom {
@@ -30,12 +41,22 @@ dependencies {
 
     // Optional Mod Menu dependency: compile-time only, never bundled.
     compileOnly "com.terraformersmc:modmenu:${project.modmenu_version}"
+    // Optional Voxy API/classes for the shader-specific render pass. Never bundled.
+    compileOnly "maven.modrinth:fxxUqruK:LzyXnE51"
 }
 
 def modVersion = project.version
 
 processResources {
     inputs.property "version", modVersion
+
+    // The custom shader beam uses Minecraft's built-in white texture.
+    // Remove any stale copy of the old local texture directory before Gradle
+    // scans the resources, since an old extracted project can retain a
+    // malformed directory timestamp that breaks Gradle 9 resource processing.
+    doFirst {
+        delete(file("src/main/resources/assets/distantbeacons/textures/misc"))
+    }
 
     filesMatching("fabric.mod.json") {
         expand "version": modVersion
@@ -55,4 +76,5 @@ java {
 
 jar {
     archiveBaseName = project.archives_base_name
+    archiveVersion = ""
 }
