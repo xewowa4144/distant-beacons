@@ -1,0 +1,11 @@
+{
+  "required": false,
+  "package": "com.xewowa4144.distantbeacons.mixin.voxy",
+  "compatibilityLevel": "JAVA_25",
+  "client": [
+    "VoxyBeaconRenderMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  }
+}

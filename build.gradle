@@ -10,6 +10,17 @@ repositories {
         name = "Terraformers"
         url = "https://maven.terraformersmc.com/"
     }
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "Modrinth"
+                url = "https://api.modrinth.com/maven"
+            }
+        }
+        filter {
+            includeGroup "maven.modrinth"
+        }
+    }
 }
 
 loom {
@@ -30,6 +41,10 @@ dependencies {
 
     // Optional Mod Menu dependency: compile-time only, never bundled.
     compileOnly "com.terraformersmc:modmenu:${project.modmenu_version}"
+    // Optional Voxy API/classes for the shader-specific render pass. Never bundled.
+    compileOnly "maven.modrinth:fxxUqruK:LzyXnE51"
+    // Optional Distant Horizons API. Compile-only; the user's installed DH provides it at runtime.
+    compileOnly "maven.modrinth:uCdwusMi:gBf0SaV1"
 }
 
 def modVersion = project.version
@@ -55,4 +70,5 @@ java {
 
 jar {
     archiveBaseName = project.archives_base_name
+    archiveVersion = ""
 }

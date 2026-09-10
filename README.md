@@ -7,23 +7,19 @@ Now beacons can actually be used as markers across players worlds! Distant Beaco
 ## Features
 
 - 🔭 **Extreme-distance beacon rendering**  
-  Beacon beams remain visible over a million blocks away.
+  Beacon beams can remain visible over a million blocks away.
 
-- 💾 **Beacon tracking**  
+- ✨ **Independent beam rendering**  
+  Distant beams are rendered independently of the beacon block's normal client-side rendering range.
+
+- 💾 **Persistent beacon tracking**  
   Known beacons are stored as persistent server data and restored across server/world restarts.
 
-- 🎨 **Accurate beam colors**  
-  Beacon beam sections and colors are retained and reproduced.
+- 🎨 **Accurate beam data**  
+  Beacon beam sections and colors are retained and reproduced for remote rendering.
 
 - 🌐 **Multiplayer support**  
   For the mod to work in multiplayer, both the server and the client must have the mod installed.
-
-## Shader support
-
-![Distant Beacons with BSL shaders](https://cdn.modrinth.com/data/EKfeICoL/images/32b920a839b861f1948ead7718180852b45ed417.png)
-<p align="center">Distant Beacons with BSL shader.</p>   
-
-Distant Beacons should work with all shaders out of the box, beam depth might need adjusting to get the desired look. 
 
 ## Configuration
 
@@ -54,3 +50,12 @@ Controls how far upward the remotely rendered beam extends. This can be configur
 ![Beam depth setting showcase](https://cdn.modrinth.com/data/cached_images/d9b4a798c6ee4e22f955bb5fee3c697919aa9006.gif)
 
 Controls how far downward the remotely rendered beam extends below the beacon. This is useful when viewing beacons from extreme distances where the terrain around the beacon is not loaded. 
+
+
+## Distant Horizons compatibility
+
+- **Distant Horizons + shaders OFF:** remote beams are submitted to DH's generic-object terrain pass and depth-test against DH LOD terrain.
+- **Distant Horizons + Iris shaders ON:** the same DH generic-object pass is used, allowing Iris/DH's generic rendering path to depth-test the beam against LOD terrain.
+- **No Distant Horizons:** the normal v1.1 rendering paths are preserved.
+
+This build is specifically packaged as the Distant Horizons support build: `distant-beacons-1.2-distanthorizons.jar`.

@@ -4,7 +4,7 @@
   "version": "${version}",
   "name": "Distant Beacons",
   "icon": "assets/distantbeacons/icon.png",
-  "description": "Always render Beacon Beams. See your beacons beam from a million blocks away, no matter the render distance!",
+  "description": "Always render Beacon Beams. See your beacons beam from a million blocks away, with Distant Horizons LOD occlusion support.",
   "authors": [
     "xewowa4144"
   ],
@@ -27,6 +27,7 @@
     "fabric-api": "*"
   },
   "mixins": [
-    "distantbeacons.client.mixins.json"
+    "distantbeacons.client.mixins.json",
+    "distantbeacons.voxy.mixins.json"
   ]
 }
