@@ -50,12 +50,3 @@ Controls how far upward the remotely rendered beam extends. This can be configur
 ![Beam depth setting showcase](https://cdn.modrinth.com/data/cached_images/d9b4a798c6ee4e22f955bb5fee3c697919aa9006.gif)
 
 Controls how far downward the remotely rendered beam extends below the beacon. This is useful when viewing beacons from extreme distances where the terrain around the beacon is not loaded. 
-
-
-## Distant Horizons compatibility
-
-- **Distant Horizons + shaders OFF:** remote beams are submitted to DH's generic-object terrain pass and depth-test against DH LOD terrain.
-- **Distant Horizons + Iris shaders ON:** the same DH generic-object pass is used, allowing Iris/DH's generic rendering path to depth-test the beam against LOD terrain.
-- **No Distant Horizons:** the normal v1.1 rendering paths are preserved.
-
-This build is specifically packaged as the Distant Horizons support build: `distant-beacons-1.2-distanthorizons.jar`.
