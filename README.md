@@ -7,19 +7,23 @@ Now beacons can actually be used as markers across players worlds! Distant Beaco
 ## Features
 
 - 🔭 **Extreme-distance beacon rendering**  
-  Beacon beams can remain visible over a million blocks away.
+  Beacon beams remain visible over a million blocks away.
 
-- ✨ **Independent beam rendering**  
-  Distant beams are rendered independently of the beacon block's normal client-side rendering range.
-
-- 💾 **Persistent beacon tracking**  
+- 💾 **Beacon tracking**  
   Known beacons are stored as persistent server data and restored across server/world restarts.
 
-- 🎨 **Accurate beam data**  
-  Beacon beam sections and colors are retained and reproduced for remote rendering.
+- 🎨 **Accurate beam colors**  
+  Beacon beam sections and colors are retained and reproduced.
 
 - 🌐 **Multiplayer support**  
   For the mod to work in multiplayer, both the server and the client must have the mod installed.
+
+## Shader support
+
+![Distant Beacons with BSL shaders](https://cdn.modrinth.com/data/EKfeICoL/images/32b920a839b861f1948ead7718180852b45ed417.png)
+<p align="center">Distant Beacons with BSL shader.</p>   
+
+Distant Beacons should work with all shaders out of the box, beam depth might need adjusting to get the desired look. 
 
 ## Configuration
 
