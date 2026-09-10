@@ -4,6 +4,15 @@
 
 Now beacons can actually be used as markers across players worlds! Distant Beacons extends Minecraft's beacon beam rendering beyond the normal client render distance. This mod looks best with LOD rendering mods such as **[Voxy](https://modrinth.com/mod/voxy)** and **[Distant Horizons](https://modrinth.com/mod/distanthorizons)**. 
 
+| Voxy | Shaders | Beam | Beam Distance | Distant Horizons | Shaders | Beam | Beam Distance |
+|------|---------|------|--------------|------------------|---------|------|--------------|
+| ON | ON | CUSTOM | 40k+ | ON, 4096 radius | ON | CUSTOM | 90k+ |
+| OFF | OFF | VANILLA | 1Mil+ | OFF | OFF | VANILLA | 1Mil+ |
+| ON | OFF | VANILLA | 1Mil+ | ON, 4096 radius | OFF | CUSTOM | 64k+ |
+| OFF | ON | CUSTOM | 1.5Mil+ | OFF | ON | CUSTOM | 1Mil+ |
+
+Tested on Minecraft 26.2 with `voxy-0.2.19-beta`, `DistantHorizons-3.2.0-b-26.2-fabric-neoforge`, `iris-fabric-1.11.2+mc26.2`, `BSL_v10.1.3.zip shader`.
+
 ## Features
 
 - 🔭 **Extreme-distance beacon rendering**  
@@ -23,7 +32,7 @@ Now beacons can actually be used as markers across players worlds! Distant Beaco
 ![Distant Beacons with BSL shaders](https://cdn.modrinth.com/data/EKfeICoL/images/32b920a839b861f1948ead7718180852b45ed417.png)
 <p align="center">Distant Beacons with BSL shader.</p>   
 
-Distant Beacons should work with all shaders out of the box, beam depth might need adjusting to get the desired look. 
+Distant Beacons should work with all shaders out of the box, beam settings might need adjusting to get the desired look. Depending on the shader used beam render distance can be lower, beams hard to see or have visual glitches or not work at all. Switch to a differrent shader if that happens.
 
 ## Configuration
 
